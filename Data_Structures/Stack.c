@@ -1,23 +1,6 @@
+#include "Stack.h"
 #include <stdlib.h>
 #include <stdio.h>
-
-typedef struct StackNode_st {
-    void* p;
-    struct StackNode_st* next;
-} StackNode;
-
-
-/*
- *  Define the stack structure.
- */
-#ifndef _STACK_IMPL_
-#define _STACK_IMPL_
-typedef struct Stack_st {
-    StackNode* top;
-} Stack;
-#endif
-#include "Stack.h"
-
 
 void push(Stack s,void* p) {
     StackNode* sn = (StackNode*) malloc(sizeof(StackNode));
