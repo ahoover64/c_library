@@ -2,7 +2,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-void push(Stack s,void* p) {
+
+void push(Stack s, void* p) {
     StackNode* sn = (StackNode*) malloc(sizeof(StackNode));
     sn->p = p;
     sn->next = s.top;
