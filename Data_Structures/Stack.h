@@ -1,17 +1,11 @@
 #ifndef __STACK_H__
 #define __STACK_H__
 
-/*
- *  Define the stack structure.
- */
-typedef struct StackNode_st {
-    void* p;
-    struct StackNode_st* next;
-} StackNode;
+#ifndef __STACK_IMPL__
+typedef struct { } *Stack;
+#endif
 
-typedef struct Stack_st {
-    StackNode* top;
-} Stack;
+Stack create_stack();
 
 void push(Stack, void*);
 
